@@ -540,6 +540,8 @@ class SystemInfo(db.Model):
                 if amd_mhz:
                     amd_ghz = round(float(amd_mhz.group(1)) / 1000, 2)  # this is a good idea
                     self.cpu = str(amd_name) + " @ " + str(amd_ghz) + " GHz"
+            if not self.cpu:
+                self.cpu = "N/A"
         else:
             self.cpu = "N/A"
 
