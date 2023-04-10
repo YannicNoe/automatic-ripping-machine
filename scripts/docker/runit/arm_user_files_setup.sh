@@ -43,7 +43,7 @@ for dir in $SUBDIRS ; do
         echo "Creating dir: $thisDir"
         mkdir -p "$thisDir"
     fi
-     #chown -R arm:arm "$thisDir"
+    chown -R arm:arm "$thisDir"
 done
 
     ##### Setup ARM-specific config files if not found
